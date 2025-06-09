@@ -1,0 +1,56 @@
+
+application {
+  config {
+    baseName wash_library
+    applicationType monolith
+    packageName br.com.oxentech
+    nativeLanguage pt-br
+    enableTranslation true
+    testFrameworks [cucumber, gatling]
+    cacheProvider caffeine
+    enableHibernateCache true
+    authenticationType jwt
+    serverPort 8080
+    prodDatabaseType postgresql
+    devDatabaseType postgresql
+    clientFramework react
+    buildTool gradle
+    enableSwaggerCodegen true
+  }
+  entities *
+}
+
+entity Loan {
+ loanTime Instant
+ returnTimeExpected Instant
+ realReturnTime Instant
+}
+
+entity Book {
+title String
+isbn String
+avaliable Boolean
+}
+entity Category {
+	name String
+    description String
+}
+entity Reservation {
+	dateReservation Instant
+    
+    
+}
+relationship ManyToOne {
+	Reservation to Book
+    
+}
+relationship OneToMany {
+	User to Loan
+    User to Reservation
+}
+
+relationship ManyToMany {
+	Book to Category 
+}
+service Loan, Reservation, Book with serviceClass
+dto Loan, Book, Category, Reservation with mapstruct
