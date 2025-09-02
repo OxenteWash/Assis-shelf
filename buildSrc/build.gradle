@@ -7,6 +7,8 @@ repositories {
 }
 
 dependencies {
+    implementation libs.openapi.generator
+    implementation "gradle.plugin.io.gatling.gradle:gatling-gradle-plugin:${libs.versions.gatling.plugin.get()}"
     implementation libs.jib.plugin
     implementation libs.modernizer.plugin
     implementation libs.nohttp.plugin

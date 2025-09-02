@@ -14,7 +14,7 @@ jib {
         }
     }
     to {
-        image = "washlibrary:latest"
+        image = "wash_library:latest"
     }
     container {
         entrypoint = ["bash", "-c", "/entrypoint.sh"]

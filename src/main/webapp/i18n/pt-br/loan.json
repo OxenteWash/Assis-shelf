@@ -1,0 +1,27 @@
+{
+  "washLibraryApp": {
+    "loan": {
+      "home": {
+        "title": "Loans",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Loan",
+        "createOrEditLabel": "Criar ou editar Loan",
+        "notFound": "Nenhum Loan encontrado"
+      },
+      "created": "Um novo Loan foi criado com o identificador {{ param }}",
+      "updated": "Um Loan foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Loan foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Loan {{ id }}?"
+      },
+      "detail": {
+        "title": "Loan"
+      },
+      "id": "ID",
+      "loanTime": "Loan Time",
+      "returnTimeExpected": "Return Time Expected",
+      "realReturnTime": "Real Return Time",
+      "user": "User"
+    }
+  }
+}

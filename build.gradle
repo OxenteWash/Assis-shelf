@@ -5,6 +5,9 @@ plugins {
     id "eclipse"
     id "com.gorylenko.gradle-git-properties"
     alias(libs.plugins.spring.boot)
+    id "jhipster.openapi-generator-conventions"
+    id "jhipster.cucumber-conventions"
+    id "jhipster.gatling-conventions"
     id "jhipster.spring-cache-conventions"
     id "jhipster.docker-conventions"
     id "jhipster.code-quality-conventions"
@@ -13,7 +16,7 @@ plugins {
     // jhipster-needle-gradle-plugins - JHipster will add additional gradle plugins here
 }
 
-group = "br.com.oxentech.washlibrary"
+group = "br.com.oxentech"
 version = "0.0.1-SNAPSHOT"
 
 description = ""
@@ -74,7 +77,7 @@ eclipse {
 defaultTasks "bootRun"
 
 springBoot {
-    mainClass = "br.com.oxentech.washlibrary.WashLibraryApp"
+    mainClass = "br.com.oxentech.WashLibraryApp"
 }
 
 test {
@@ -151,6 +154,7 @@ dependencies {
     testImplementation "org.springframework.boot:spring-boot-test"
     testImplementation "org.springframework.security:spring-security-test"
     implementation platform(libs.spring.cloud.dependencies)
+    implementation libs.jackson.databind.nullable
     implementation libs.jhipster.framework
     implementation libs.springdoc.openapi.starter.webmvc.api
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
@@ -161,6 +165,8 @@ dependencies {
     implementation "org.hibernate.orm:hibernate-core"
     implementation "org.hibernate.validator:hibernate-validator"
     implementation "org.postgresql:postgresql"
+  // jasper reports
+    implementation "net.sf.jasperreports:jasperreports:7.0.3"
     testImplementation "org.testcontainers:jdbc"
     testImplementation "org.testcontainers:junit-jupiter"
     testImplementation "org.testcontainers:postgresql"
@@ -169,6 +175,7 @@ dependencies {
     annotationProcessor "org.hibernate.orm:hibernate-jpamodelgen"
     developmentOnly "org.springframework.boot:spring-boot-docker-compose"
     // jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
+
 }
 
 task cleanResources(type: Delete) {

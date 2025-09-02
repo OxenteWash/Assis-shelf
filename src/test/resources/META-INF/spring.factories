@@ -1,2 +1,2 @@
 org.springframework.test.context.ContextCustomizerFactory = br.com.oxentech.\
-    washlibrary.config.SqlTestContainersSpringContextCustomizerFactory
+    config.SqlTestContainersSpringContextCustomizerFactory

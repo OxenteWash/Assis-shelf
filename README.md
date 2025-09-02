@@ -1,4 +1,4 @@
-# washLibrary
+# wash_library
 
 This application was generated using JHipster 8.7.3, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.7.3](https://www.jhipster.tech/documentation-archive/v8.7.3).
 
@@ -22,6 +22,19 @@ In the project root, JHipster generates configuration files for tools like git, 
 
 ## Development
 
+### Doing API-First development using openapi-generator-cli
+
+[OpenAPI-Generator]() is configured for this application. You can generate API code from the `src/main/resources/swagger/api.yml` definition file by running:
+
+```bash
+./gradlew openApiGenerate
+```
+
+Then implements the generated delegate classes with `@Service` classes.
+
+To edit the `api.yml` definition file, you can use a tool such as [Swagger-Editor](). Start a local instance of the swagger-editor using docker by running: `docker compose -f src/main/docker/swagger-editor.yml up -d`. The editor will then be reachable at [http://localhost:7742](http://localhost:7742).
+
+Refer to [Doing API-First development][] for more details.
 The build system will install automatically the recommended version of Node and npm.
 
 We provide a wrapper to launch npm.
@@ -88,7 +101,7 @@ For further instructions on how to develop with JHipster, have a look at [Using 
 
 ### Packaging as jar
 
-To build the final jar and optimize the washLibrary application for production, run:
+To build the final jar and optimize the wash_library application for production, run:
 
 ```
 ./gradlew -Pprod clean bootJar
@@ -129,6 +142,16 @@ To launch your application's tests, run:
 
 ```
 ./gradlew test integrationTest jacocoTestReport
+```
+
+### Gatling
+
+Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/java/gatling/simulations](src/test/java/gatling/simulations).
+
+You can execute all Gatling tests with
+
+```
+./gradlew gatlingRun.
 ```
 
 ### Client tests
@@ -238,6 +261,10 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v8.7.3/setting-up-ci/
 [Node.js]: https://nodejs.org/
 [NPM]: https://www.npmjs.com/
+[OpenAPI-Generator]: https://openapi-generator.tech
+[Swagger-Editor]: https://editor.swagger.io
+[Doing API-First development]: https://www.jhipster.tech/documentation-archive/v8.7.3/doing-api-first-development/
+[Gatling]: https://gatling.io/
 [Webpack]: https://webpack.github.io/
 [BrowserSync]: https://www.browsersync.io/
 [Jest]: https://facebook.github.io/jest/

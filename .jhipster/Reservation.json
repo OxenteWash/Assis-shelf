@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20250609204810"
+  },
+  "applications": ["wash_library"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "dateReservation",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Reservation",
+  "relationships": [
+    {
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "reservation",
+      "relationshipName": "book",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "reservation",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipWithBuiltInEntity": true
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

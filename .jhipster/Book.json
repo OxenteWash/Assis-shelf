@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20250609204808"
+  },
+  "applications": ["wash_library"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isbn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "avaliable",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Book",
+  "relationships": [
+    {
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "book",
+      "relationshipName": "category",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "reservation",
+      "otherEntityRelationshipName": "book",
+      "relationshipName": "reservation",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

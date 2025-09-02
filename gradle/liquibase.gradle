@@ -21,8 +21,8 @@ liquibase {
   activities {
     main {
       driver "org.postgresql.Driver"
-      url "jdbc:postgresql://localhost:5432/washLibrary"
-      username "washLibrary"
+      url "jdbc:postgresql://localhost:5432/wash_library"
+      username "wash_library"
       password "password"
       changelogFile "src/main/resources/config/liquibase/master.xml"
       logLevel "debug"
@@ -30,11 +30,11 @@ liquibase {
     }
     diffLog {
       driver "org.postgresql.Driver"
-      url "jdbc:postgresql://localhost:5432/washLibrary"
-      username "washLibrary"
+      url "jdbc:postgresql://localhost:5432/wash_library"
+      username "wash_library"
       password "password"
       changelogFile project.ext.diffChangelogFile
-      referenceUrl "hibernate:spring:br.com.oxentech.washlibrary.domain?dialect=org.hibernate.dialect.PostgreSQLDialect&hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+      referenceUrl "hibernate:spring:br.com.oxentech.domain?dialect=org.hibernate.dialect.PostgreSQLDialect&hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
       logLevel "debug"
       classpath "$buildDir/classes/java/main"
     }

@@ -37,17 +37,14 @@ entity Category {
 }
 entity Reservation {
 	dateReservation Instant
-    
-    
 }
 relationship ManyToOne {
 	Reservation to Book
-    
+    Loan to User with builtInEntity
+    Reservation to User with builtInEntity
 }
-relationship OneToMany {
-	User to Loan
-    User to Reservation
-}
+
+
 
 relationship ManyToMany {
 	Book to Category 

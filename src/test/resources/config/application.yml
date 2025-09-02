@@ -15,7 +15,7 @@
 
 spring:
   application:
-    name: washLibrary
+    name: wash_library
   cloud:
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
@@ -62,7 +62,7 @@ jhipster:
   clientApp:
     name: 'washLibraryApp'
   mail:
-    from: washLibrary@localhost.com
+    from: wash_library@localhost.com
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender

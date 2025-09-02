@@ -1,13 +1,17 @@
 {
   "global": {
-    "title": "WashLibrary",
+    "title": "Wash_library",
     "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=es\">actualice su navegador</a> para mejorar su experiencia.",
     "menu": {
       "home": "Inicio",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "loan": "Loan",
+        "book": "Book",
+        "category": "Category",
+        "reservation": "Reservation"
       },
       "account": {
         "main": "Cuenta",
